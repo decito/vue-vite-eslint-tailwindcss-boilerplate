@@ -1,16 +1,7 @@
-<script setup lang="ts">
-import WelcomeItem from './WelcomeItem.vue'
-import DocumentationIcon from './icons/IconDocumentation.vue'
-import ToolingIcon from './icons/IconTooling.vue'
-import EcosystemIcon from './icons/IconEcosystem.vue'
-import CommunityIcon from './icons/IconCommunity.vue'
-import SupportIcon from './icons/IconSupport.vue'
-</script>
-
 <template>
   <WelcomeItem>
     <template #icon>
-      <DocumentationIcon />
+      <IconDocumentation />
     </template>
 
     <template #heading>Documentation</template>
@@ -24,7 +15,7 @@ import SupportIcon from './icons/IconSupport.vue'
 
   <WelcomeItem>
     <template #icon>
-      <ToolingIcon />
+      <IconTooling />
     </template>
     <template #heading>Tooling</template>
 
@@ -58,7 +49,7 @@ import SupportIcon from './icons/IconSupport.vue'
 
   <WelcomeItem>
     <template #icon>
-      <EcosystemIcon />
+      <IconEcosystem />
     </template>
     <template #heading>Ecosystem</template>
 
@@ -84,7 +75,7 @@ import SupportIcon from './icons/IconSupport.vue'
 
   <WelcomeItem>
     <template #icon>
-      <CommunityIcon />
+      <IconCommunity />
     </template>
     <template #heading>Community</template>
 
@@ -97,26 +88,27 @@ import SupportIcon from './icons/IconSupport.vue'
       rel="noopener"
       >StackOverflow</a
     >. You should also subscribe to
-    <a href="https://news.vuejs.org" target="_blank" rel="noopener"
-      >our mailing list</a
-    >
+    <a href="https://news.vuejs.org" target="_blank" rel="noopener">
+      our mailing list
+    </a>
     and follow the official
-    <a href="https://twitter.com/vuejs" target="_blank" rel="noopener"
-      >@vuejs</a
-    >
+    <a href="https://twitter.com/vuejs" target="_blank" rel="noopener">
+      @vuejs
+    </a>
     twitter account for latest news in the Vue world.
   </WelcomeItem>
 
   <WelcomeItem>
     <template #icon>
-      <SupportIcon />
+      <IconSupport />
     </template>
     <template #heading>Support Vue</template>
 
     As an independent project, Vue relies on community backing for its
     sustainability. You can help us by
-    <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener"
-      >becoming a sponsor</a
-    >.
+    <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener">
+      becoming a sponsor
+    </a>
+    .
   </WelcomeItem>
 </template>
