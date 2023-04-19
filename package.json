@@ -1,5 +1,5 @@
 {
-  "name": "vue-vite-eslint-tailwindcss-boilerplate",
+  "name": "vue-boilerplate",
   "version": "1.0.0",
   "private": true,
   "scripts": {
