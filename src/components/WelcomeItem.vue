@@ -1,11 +1,15 @@
 <template>
-  <div class="item">
-    <i>
+  <div
+    class="item mt-8 flex before:border-l-divider-light-2 after:border-l-divider-light-2 before:dark:border-l-divider-dark-2 after:dark:border-l-divider-dark-2 lg:mt-0 lg:before:absolute lg:before:-left-1 lg:before:block lg:before:border-l lg:after:absolute lg:after:-left-1 lg:after:block lg:after:border-l"
+  >
+    <i
+      class="flex h-8 w-8 place-content-center place-items-center border-divider-light-2 text-light-1 dark:border-divider-dark-1 dark:text-dark-2 lg:absolute lg:-left-7 lg:h-12 lg:w-12 lg:rounded-lg lg:border lg:border-divider-light-2 lg:bg-white lg:dark:border-divider-dark-2 lg:dark:bg-black"
+    >
       <slot name="icon"></slot>
     </i>
 
-    <div class="details">
-      <h3>
+    <div class="ml-4 flex-1">
+      <h3 class="mb-2 text-sm font-medium text-light-1 dark:text-dark-2">
         <slot name="heading"></slot>
       </h3>
 
@@ -15,74 +19,23 @@
 </template>
 
 <style scoped>
-.item {
-  margin-top: 2rem;
-  display: flex;
-}
-
-.details {
-  flex: 1;
-  margin-left: 1rem;
-}
-
-i {
-  display: flex;
-  place-items: center;
-  place-content: center;
-  width: 32px;
-  height: 32px;
-
-  color: var(--color-text);
-}
-
-h3 {
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-bottom: 0.4rem;
-  color: var(--color-heading);
-}
-
 @media (min-width: 1024px) {
   .item {
-    margin-top: 0;
-    padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);
+    padding: 0.4rem 0 1rem calc(80px / 2);
   }
 
   i {
     top: calc(50% - 25px);
-    left: -26px;
-    position: absolute;
-    border: 1px solid var(--color-border);
-    background: var(--color-background);
-    border-radius: 8px;
-    width: 50px;
-    height: 50px;
   }
 
   .item:before {
-    content: ' ';
-    border-left: 1px solid var(--color-border);
-    position: absolute;
-    left: 0;
     bottom: calc(50% + 25px);
     height: calc(50% - 25px);
   }
 
   .item:after {
-    content: ' ';
-    border-left: 1px solid var(--color-border);
-    position: absolute;
-    left: 0;
-    top: calc(50% + 25px);
-    height: calc(50% - 25px);
-  }
-
-  .item:first-of-type:before {
-    display: none;
-  }
-
-  .item:last-of-type:after {
-    display: none;
+    top: calc(50% + 23px);
+    height: calc(50% - 23px);
   }
 }
 </style>

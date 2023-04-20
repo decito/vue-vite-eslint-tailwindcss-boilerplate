@@ -1,0 +1,66 @@
+@import './tailwind.css';
+
+*,
+*::before,
+*::after {
+  @apply relative;
+}
+
+body {
+  @apply min-h-screen bg-white leading-relaxed text-light-1 transition-colors duration-500 dark:bg-black dark:text-dark-2 lg:flex lg:place-items-center;
+
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-light-1 dark:text-dark-1;
+}
+
+#app {
+  @apply mx-auto max-w-[1280px] p-8 font-normal;
+}
+
+a,
+.green {
+  @apply text-primary transition-colors;
+}
+
+nav a.router-link-exact-active {
+  @apply text-light-1 dark:text-dark-2;
+}
+
+nav a.router-link-exact-active:hover {
+  @apply bg-transparent;
+}
+
+nav a:first-of-type {
+  @apply border-0;
+}
+
+@media (hover: hover) {
+  a:hover {
+    @apply bg-primary/20;
+  }
+}
+
+@media (min-width: 1024px) {
+  #app {
+    @apply grid px-8;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .item:first-of-type:before,
+  .item:last-of-type:after {
+    @apply hidden;
+  }
+}
